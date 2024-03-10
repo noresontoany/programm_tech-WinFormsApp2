@@ -28,51 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtcop = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            button1 = new Button();
+            txtcop = new TextBox();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Решаем";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.result_click);
+            button1.Dock = DockStyle.Bottom;
+            button1.Location = new Point(3, 373);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(800, 38);
+            button1.TabIndex = 0;
+            button1.Text = "Решаем";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += result_click;
             // 
             // txtcop
             // 
-            this.txtcop.Location = new System.Drawing.Point(95, 88);
-            this.txtcop.Name = "txtcop";
-            this.txtcop.Size = new System.Drawing.Size(100, 23);
-            this.txtcop.TabIndex = 1;
+            txtcop.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtcop.Location = new Point(3, 27);
+            txtcop.Margin = new Padding(4, 5, 4, 5);
+            txtcop.Name = "txtcop";
+            txtcop.Size = new Size(581, 31);
+            txtcop.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(279, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Кол-во копеек";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
+            label1.Location = new Point(671, 27);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(132, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Кол-во копеек";
+            label1.Click += label1_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txtcop);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(806, 414);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtcop);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            ClientSize = new Size(806, 414);
+            Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "№12";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -80,5 +100,6 @@
         private Button button1;
         private TextBox txtcop;
         private Label label1;
+        private GroupBox groupBox1;
     }
 }
