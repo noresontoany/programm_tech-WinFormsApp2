@@ -9,14 +9,10 @@ namespace WinFormsApp2
         {
             InitializeComponent();
 
-                
+
             txtcop.Text = Properties.Settings.Default.cop.ToString();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void result_click(object sender, EventArgs e)
         {
@@ -25,7 +21,7 @@ namespace WinFormsApp2
             {
                 cop = int.Parse(this.txtcop.Text);
             }
-            catch(FormatException)
+            catch (FormatException)
             {
                 return;
             }
@@ -115,5 +111,9 @@ namespace WinFormsApp2
             }
         }
 
+        private void clear_Click(object sender, EventArgs e)
+        {
+            txtcop.Text = string.Empty;
+        }
     }
 }
